@@ -13,6 +13,10 @@ public class CarApp {
         firstCar.move();
         firstCar.playMusic("Aylon");
         firstCar.offEngine();
+        System.out.println(firstCar.brand);
+
+        int mileage = firstCar.calculateTotalMileage(700, 50);
+        System.out.println(mileage);
         //
 
         Car secondCar = new Car();
@@ -23,6 +27,7 @@ public class CarApp {
         secondCar.move();
         secondCar.playMusic("Burna boy");
         secondCar.playMusic("on the low");
+        System.out.println(secondCar.calculateTotalMileage(400,60));
 
 
 

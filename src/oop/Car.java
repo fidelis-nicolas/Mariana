@@ -46,5 +46,10 @@ public class Car {
         engineStatus = false;
         return engineStatus;
     }
+
+    public int calculateTotalMileage(int distance, int day){
+        int total = distance * day;
+        return total;
+    }
     // Create a method print all the car information
 }
