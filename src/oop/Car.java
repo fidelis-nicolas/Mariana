@@ -1,55 +1,54 @@
 package oop;
 
 public class Car {
-    //A class is a blueprint of an object
+    //Fields
+   private String brand;
+   private String engineType;
+   private int topSpeed;
 
-    /*
-        Conventions of naming classes
-        1. Class name should always start with upper cases
-        2. A class name cannot start number and special character except underscore "_"
-        3. A class name should be one word
-        5. Cases applies to naming classes
-     */
+   //Constructors
+   public Car(){
 
-    //Properties, State, Fields
-
-    public String brand;
-    public String color;
-    public int year;
-    public String wheelTYpe;
-    public boolean engineStatus;
-
-    /*
-        Access specifiers
-          1. public -> Available to all classes withing the project
-          2. Protected -> Available to all classes in the same package
-          3. private -> Only available to the class in which it was created
-     */
-    /*
-        Format for creating methods
-        access specifier return type method name (parameters) {
-            programs ............
-        }
-     */
-
-    public void move(){
-        System.out.println(brand + " is moving...");
-    }
-    public void playMusic(String track){
-        System.out.println("Playing... " + track);
-    }
-    public boolean startEngine(){
-        engineStatus = true;
-        return engineStatus;
-    }
-    public boolean offEngine(){
-        engineStatus = false;
-        return engineStatus;
+   }
+    public Car(String brand, String engineType, int topSpeed) {
+        this.brand = brand;
+        this.engineType = engineType;
+        this.topSpeed = topSpeed;
     }
 
-    public int calculateTotalMileage(int distance, int day){
-        int total = distance * day;
-        return total;
+
+    //Getters and Setters
+    public String getBrand() {
+        return brand;
     }
-    // Create a method print all the car information
+
+    public void setBrand(String brand) {
+        this.brand = brand;
+    }
+
+    public String getEngineType() {
+        return engineType;
+    }
+
+    public void setEngineType(String engineType) {
+        this.engineType = engineType;
+    }
+
+    public int getTopSpeed() {
+        return topSpeed;
+    }
+
+    public void setTopSpeed(int topSpeed) {
+        this.topSpeed = topSpeed;
+    }
+
+    public StringBuilder carInfo(){
+       StringBuilder builder = new StringBuilder();
+
+       builder.append("Brand: " + this.brand +"\n");
+       builder.append("Engine Type: " + this.engineType +"\n");
+       builder.append("Top Speed: " + this.topSpeed +"\n");
+
+       return builder;
+    }
 }

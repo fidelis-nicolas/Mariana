@@ -6,6 +6,9 @@ public class Product {
     private double productPrice;
     private String description;
 
+
+
+
     /*
         Constructors
         -> Used to initialise the properties of our class

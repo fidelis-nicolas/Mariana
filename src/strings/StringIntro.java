@@ -8,7 +8,6 @@ public class StringIntro {
         //Assignment what is the difference betweeen trim and strip in java strings
         String sentence = "I love Java ";
 
-        Car car = new Car();
 
 
 
